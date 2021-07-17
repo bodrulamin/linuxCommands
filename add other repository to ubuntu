@@ -1,0 +1,11 @@
+ ////add repository to 
+ /etc/apt/sources.d/
+ 
+ ////get gpg keys
+ apt update
+ 
+//// add keys as trusted
+ 
+ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B56FFA946EB1660A
+
+ // this will add gpg key to ubuntu system to install other repository

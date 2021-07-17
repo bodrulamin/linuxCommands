@@ -1,0 +1,7 @@
+ 
+sudo dd of=/dev/sdc status=progress oflag=boot if='/media/b/6CE22F8975CFF44F/iso files/Parrot-security-4.10_amd64.iso'
+sudo dd if= of=/dev/sdX bs=4M && sync
+
+
+ 
+sudo dd of=/dev/sdc bs=1M status=progress oflag=sync if=/home/b/Downloads/manjaro-xfce-18.0.4-x32-stable-minimal-i686.iso

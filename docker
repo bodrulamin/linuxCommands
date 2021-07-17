@@ -1,0 +1,8 @@
+ run parrotsec
+docker run --rm -ti --network host -v $PWD/work:/work parrotsec/security
+ 
+ 
+ sudo systemctl start docker
+ sudo docker run -it -p 1512:1512 wnameless/oracle-xe-11g-r2
+ sudo docker exec -it 492862e7ac41 bash
+

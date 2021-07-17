@@ -1,0 +1,15 @@
+ 
+
+5
+
+If you launch kde from xinit command , you could set the following environment variables in ~/.xinitrc ,
+
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+This will make all programs respect ibus. (If this don't work for you , modify startkde4 script directly , add the 3 lines to the top of it , after #!/bin/sh
+
+And also a auto-start of ibus program , ibus-daemon -xd , set this in systemsettings , there's something named "Startup" , can't remember the exact name
+
+ibus-daemon --xim -drx --desktop=kde

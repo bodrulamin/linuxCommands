@@ -1,0 +1,32 @@
+ 
+5- Dual Boot - Linux Installation
+
+-Create a folder with PhoenixOS-ROC name into the disk. (home)
+-Copy all Phoenix OS ROC files from iso into the /PhoenixOS-ROC folder.
+-Create "data" named folder into the /PhoenixOS-ROC folder.
+-Open terminal (in home folder)
+-Run this command: sudo mv PhoenixOS-ROC /PhoenixOS-ROC/ 
+-Run this command: gedit /etc/grub.d/40_custom or  sudo gedit /etc/grub.d/40_custom (Now you will see a text page. Copy the menuentry codes in.)
+
+Code:
+menuentry “PhoenixOS-ROC” {
+linux /PhoenixOS-ROC/kernel root=/dev/ram0 androidboot.hardware=android_x86_64 androidboot.selinux=permissive quiet SRC=/PhoenixOS-ROC DATA=/data VGA=788
+initrd /PhoenixOS-ROC/initrd.img
+}
+
+For HDMI output:
+
+Code:
+menuentry “PhoenixOS-ROC HDMI” {
+linux /PhoenixOS-ROC/kernel root=/dev/ram0 androidboot.hardware=android_x86_64 androidboot.selinux=permissive quiet SRC=/PhoenixOS-ROC DATA=/data VGA=788 video=LVDS-1:d
+initrd /PhoenixOS-ROC/initrd.img
+}
+
+-Save it and open terminal.
+-Run this command: sudo update-grub
+-Restart the system. If you do not see the boot options, follow this solution.
+
+-Run this command: gedit /etc/default/grub or sudo gedit /etc/default/grub
+-Change the text line GRUB_HIDDEN_TIMEOUT=0 to #GRUB_HIDDEN_TIMEOUT=0 and save it. Open terminal.
+-Run this command: sudo update-grub
+-Restart the system.

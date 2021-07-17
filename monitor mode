@@ -1,0 +1,37 @@
+ 
+ #############################
+ 
+ // monitor
+ sudo ip link set wlan0 down
+ sudo iw wlan0 set monitor none
+ sudo ip link set wlan0 up 
+ 
+ // managed
+sudo ip link set wlan0 down
+sudo iw wlan0 set type managed
+sudo ip link set wlan0 up
+
+
+#####################
+
+//monitor
+sudo ifconfig wlan0 down
+sudo iwconfig wlan0 mode monitor
+sudo ifconfig wlan0 up
+
+//managed
+sudo ifconfig wlan0 down
+sudo iwconfig wlan0 mode managed
+sudo ifconfig wlan0 up
+
+########################
+
+
+/////do not use
+
+//monitor
+sudo airmon-ng check kill
+sudo airmon-ng start wlan0
+
+//managed
+sudo airmon-ng stop wlan0mon

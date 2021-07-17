@@ -1,0 +1,1 @@
+keytool -list -v -alias iscamls -keystore /media/b/SSD/Projects/keystore/mykeystore.jks

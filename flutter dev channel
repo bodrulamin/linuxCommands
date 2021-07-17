@@ -1,0 +1,4 @@
+flutter channel dev
+flutter upgrade
+then run via web
+flutter run -d web 

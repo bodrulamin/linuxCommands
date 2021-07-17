@@ -1,0 +1,19 @@
+└──╼ $sudo nmap -sn 192.168.0.1/24
+Starting Nmap 7.91 ( https://nmap.org ) at 2020-11-15 21:55 +06
+Stats: 0:00:09 elapsed; 0 hosts completed (0 up), 255 undergoing ARP Ping Scan
+Parallel DNS resolution of 4 hosts. Timing: About 0.00% done
+Nmap scan report for 192.168.0.1
+Host is up (0.0068s latency).
+MAC Address: 18:A6:F7:BB:36:7E (Tp-link Technologies)
+Nmap scan report for 192.168.0.104
+Host is up (0.18s latency).
+MAC Address: D8:A3:15:90:B0:49 (vivo Mobile Communication)
+Nmap scan report for 192.168.0.105
+Host is up (0.22s latency).
+MAC Address: DC:6D:CD:6B:27:59 (Guangdong Oppo Mobile Telecommunications)
+Nmap scan report for 192.168.0.107
+Host is up (0.16s latency).
+MAC Address: BC:75:74:67:B5:7F (Huawei Technologies)
+Nmap scan report for 192.168.0.109
+Host is up.
+Nmap done: 256 IP addresses (5 hosts up) scanned in 29.29 seconds

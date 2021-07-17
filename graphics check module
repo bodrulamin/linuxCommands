@@ -1,0 +1,30 @@
+lspci -k | grep -EA3 'VGA|3D|Display' 
+
+kernel params
+
+GRUB_CMDLINE_LINUX_DEFAULT="radeon.cik_support=0 amdgpu.cik_support=1 radeon.si_support=0 amdgpu.si_support=1 amdgpu.dc=1 amdgpu.dpm=1"
+
+don't forget to update-grub
+
+
+
+/////////////////
+
+
+
+Blacklisting it did the trick. I'm now running AMDGPU, at least until pro becomes available. I'll list the steps as the answer in case anyone else comes looking for answers.
+
+Blacklisting built in kernel modules is done at startup, so grub does the work. Edit
+
+/ect/default/grub
+
+with the editor of your choice and add
+
+modprobe.blacklist=radeon
+
+in to GRUB_CMDLINE_LINUX_DEFAULT right next to anything that might already be there, such as quiet splash. Then, save the changes and update grub.
+
+sudo update-grub2
+
+Reboot and you should be using AMDGPU instead of radeon. I should stress making sure your card is compatible, else blacklisting your gfx module is likely to cause problems.
+

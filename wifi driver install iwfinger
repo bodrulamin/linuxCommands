@@ -1,0 +1,20 @@
+You'll find a known to be working driver on this github:
+https://github.com/lwfinger/rtl8188eu
+
+First, undo what you did with provided CD
+Then install the driver from github:
+
+# Prepare
+sudo apt update
+sudo apt-get install -f
+sudo apt-get dist-upgrade
+sudo apt-get -y install dkms build-essential git
+
+# Go install the driver 
+mkdir ~/DriverBuild
+cd ~/DriverBuild
+git clone https://github.com/lwfinger/rtl8188eu.git
+sudo dkms add ./rtl8188eu
+sudo dkms build 8188eu/1.0
+sudo dkms install 8188eu/1.0
+reboot

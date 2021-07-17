@@ -1,0 +1,4 @@
+//goto backup directory
+sudo dd if=/dev/sda bs=512 count=1 of=mbr.img
+
+sudo dd if=/dev/sda2 of=parrotsnap.img status=progress

@@ -1,0 +1,2 @@
+ 
+vboxmanage setextradata "p" "CustomVideoMode1" "1900x1000x16"

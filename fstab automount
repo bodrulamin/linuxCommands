@@ -1,1 +1,2 @@
-/dev/sda3   /media/windows  ntfs    defaults    0   0
+/dev/sda5   /run/media/b/storage    ntfs-3g	defaults	0	0
+/dev/sda4	swap	swap	defaults	0	0

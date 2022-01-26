@@ -6,3 +6,6 @@ docker run --rm -ti --network host -v $PWD/work:/work parrotsec/security
  sudo docker run -it -p 1512:1512 wnameless/oracle-xe-11g-r2
  sudo docker exec -it 492862e7ac41 bash
 
+sudo docker container run -d --name=db -v /home/b/storage/docker/mysqldata:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql
+sudo docker start db
+
